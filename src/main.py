@@ -4,9 +4,6 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 
-BLOCK_DELIMITERS = ['{%', '%}']
-VARIABLE_DELIMITERS = ['{{{', '}}}']
-
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
