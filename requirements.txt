@@ -1,0 +1,5 @@
+uvicorn==0.16.0
+fastapi==0.70.1
+jinja2==3.0.3
+websockets==10.1
+PyYAML==6.0  # for uvicorn response time logs
