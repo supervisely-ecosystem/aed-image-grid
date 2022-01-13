@@ -7,11 +7,11 @@ from fastapi.templating import Jinja2Templates
 BLOCK_DELIMITERS = ['{%', '%}']
 VARIABLE_DELIMITERS = ['{{{', '}}}']
 
-
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
 app.mount('/w3images', StaticFiles(directory='w3images', html=True), name='w3images')
+app.mount('/static', StaticFiles(directory='static', html=True), name='static')
 
 
 @app.get("/", response_class=HTMLResponse)
